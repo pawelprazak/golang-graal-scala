@@ -8,9 +8,20 @@ scala-cli --power package . \
     --server=false \
     --jvm=graalvm-java17 \
     --graalvm-jvm-id=graalvm-java17:22 \
-    -o lib/libscala.dylib -f
+    --graal \
+    -o lib/libscala -f \
+    -- \
+    --no-fallback --shared -H:Name=libscala
 ```
 
 ```bash
-go run golang/main.go
+go build -o main golang/main.go
+```
+
+```bash
+mkdir out
+cp main out
+cp lib/libscala.dylib out
+cd out
+./main
 ```

@@ -1,11 +1,10 @@
-//> using scala 3.3.3
-//> using options -deprecation -feature -Wunused:all -language:noAutoTupling -Wvalue-discard -Wnonunit-statement
+//> using scala 3.3.1
+//> using options -deprecation -feature -language:noAutoTupling -Werror -Wunused:all -Wvalue-discard -Wnonunit-statement
 //> using publish.organization com.bluecatcode.example
-//> using publish.name libscala
-//> using packaging.packageType graalvm
-//> using packaging.graalvmArgs --no-fallback --shared -H:Name=libscala
+//> using publish.name scala
+
 //> using compileOnly.dep org.graalvm.sdk:graal-sdk:22.3.5
-//> using dep org.scalameta:scalameta_2.13:4.9.0
+//> using dep org.scalameta:scalameta_2.13:4.9.1
 
 import org.graalvm.nativeimage.IsolateThread
 import org.graalvm.nativeimage.c.function.CEntryPoint

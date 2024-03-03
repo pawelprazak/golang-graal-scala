@@ -1,6 +1,5 @@
 package main
 
-import "C"
 import (
 	"fmt"
 	"os"
@@ -9,7 +8,7 @@ import (
 /*
 #cgo CFLAGS: -I${SRCDIR}/../lib
 #cgo LDFLAGS: -L${SRCDIR}/../lib
-#cgo LDFLAGS: -Wl,-rpath,${SRCDIR}/../lib
+#cgo LDFLAGS: -Wl,-rpath,"$ORIGIN"
 #cgo LDFLAGS: -lscala
 #include <stdlib.h>
 #include <errno.h>

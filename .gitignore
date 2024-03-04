@@ -3,7 +3,7 @@
 .bsp
 
 /lib
-/out
+/bin
 
 *.class
 *.log
